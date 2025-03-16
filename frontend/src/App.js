@@ -9,6 +9,7 @@ import PastContest from './page/PastContest';
 import Login from './page/Login';
 import SignUp from './page/SignUp';
 import LandingPage from './page/LandingPage';
+import Bookmarked from './page/Bookmarked';
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
             <Route exact path='/login' element={<Login/>}/>
             <Route exact path='/signup' element={<SignUp/>}/>
             <Route exact path='/pastContest' element={<PastContest/>}/>
+            <Route exact path='/bookmarks' element={<Bookmarked/>}/>
     </Routes>
       
     </Router>

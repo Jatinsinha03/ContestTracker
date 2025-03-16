@@ -273,3 +273,52 @@
     color: #00ffff;
     text-decoration: none;
 }
+
+.landing-container {
+    height: 100vh;
+    background-image: url('./assets/759evlg_CodingCpmp-1.jpg'); /* Update with the actual path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Ensuring text is visible */
+    background-blend-mode: darken; /* Helps text stand out against a complex background */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.LandingTitle {
+    font-size: 9rem; /* Responsive font size */
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+}
+
+.login-btnn,.signup-btnn {
+    border: none;
+    padding: 25px 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+    background-color: #007BFF; /* Bootstrap primary color */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.login-btnn,.signup-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.login-btnn {
+    background-color: #28a745; /* Green for login */
+}
+
+.signup-btnn {
+    background-color: #17a2b8; /* Blue for signup */
+}
