@@ -1,5 +1,5 @@
 .bdy{
-    font-family: 'Outfit', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-image: linear-gradient(85.2deg, rgba(33, 3, 40, 1) 7.5%, rgba(65, 5, 72, 1) 88.7%);
     height: 100vh;
     margin: 0;
@@ -321,4 +321,55 @@
 
 .signup-btnn {
     background-color: #17a2b8; /* Blue for signup */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #007bff; /* Bootstrap primary blue */
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #e9ecef;
+}
+
+.nav-links .active {
+    color: white;
+    background-color: #28a745; /* Bootstrap success green */
+}
+
+.logout-button {
+    border: none;
+    background: none;
+    color: #dc3545; /* Bootstrap danger color for logout */
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 8px 15px;
+}
+
+.logout-button:hover {
+    color: #bd2130; /* Darker shade on hover */
+    text-decoration: underline; /* Optional: underline on hover for emphasis */
 }

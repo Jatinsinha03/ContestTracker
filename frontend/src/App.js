@@ -10,10 +10,12 @@ import Login from './page/Login';
 import SignUp from './page/SignUp';
 import LandingPage from './page/LandingPage';
 import Bookmarked from './page/Bookmarked';
+import NavBar from './components/NavBar';
 function App() {
   return (
     <>
     <Router>
+      <NavBar/>
     <Routes>
             <Route exact path='/' element={<LandingPage/>}/>
             <Route exact path='/contest' element={<Contest/>}/>
