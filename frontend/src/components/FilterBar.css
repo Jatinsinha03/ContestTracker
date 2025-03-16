@@ -1,0 +1,42 @@
+/* src/components/FilterBar.css */
+.filter-bar {
+    padding: 20px 30px; /* Increased padding for a more spacious feel */
+    background-color: #ffffff; /* Clean white background */
+    border-bottom: 2px solid #eaeaea; /* Subtle bottom border for separation */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start; /* Align items to the start */
+}
+
+.filter-bar label {
+    margin-right: 30px; /* Increased space between filters for better tap targets */
+    font-size: 18px; /* Larger font size for better readability */
+    color: #333; /* Dark color for high contrast and readability */
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Align checkbox and label text vertically */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.filter-bar label:hover {
+    color: #0056b3; /* Highlight color on hover for interactivity */
+}
+
+.filter-bar input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and text */
+    width: 20px; /* Larger checkbox for easier interaction */
+    height: 20px; /* Maintain aspect ratio */
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .filter-bar {
+        justify-content: space-around; /* Evenly space items on smaller screens */
+        padding: 20px 10px; /* Adjust padding for smaller screens */
+    }
+    .filter-bar label {
+        margin-right: 10px; /* Adjust spacing on smaller screens */
+        margin-bottom: 10px; /* Add bottom margin for stacked elements */
+    }
+}
