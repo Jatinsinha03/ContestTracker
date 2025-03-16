@@ -14,6 +14,7 @@ app.use(cors())
 app.use('/api/leetcode', leetcodeRoutes);
 app.use('/api/codeforces', codeforcesRoutes);
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/bookmark', require('./routes/ContestBookmark'));
 
 
 // Start the server
