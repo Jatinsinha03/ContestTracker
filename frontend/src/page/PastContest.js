@@ -76,7 +76,7 @@ function PastContests() {
                         <PreviousContestCard key={contest.id} contest={contest} />
                     ))
                 ) : (
-                    <p>No contests available for the selected platforms.</p>
+                    <p>Fetching Past Contest</p>
                 )}
             </div>
         </div>

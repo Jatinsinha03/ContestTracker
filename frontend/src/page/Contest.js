@@ -139,7 +139,7 @@ const handleFilterChange = (newSelectedPlatforms) => {
                         <ContestCard key={contest.id} contest={contest} />
                     ))
                 ) : (
-                    <p>No contests available for the selected platforms.</p>
+                    <p>Fetching Contest</p>
                 )}
             </div>
         
