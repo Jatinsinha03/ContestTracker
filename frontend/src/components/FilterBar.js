@@ -1,6 +1,7 @@
 // src/FilterBar.js
 import React from 'react';
 import './FilterBar.css'
+import '../App.css'
 
 function FilterBar({ platforms, selectedPlatforms, onChange }) {
     const handleCheckboxChange = (event) => {

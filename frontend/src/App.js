@@ -11,6 +11,7 @@ import SignUp from './page/SignUp';
 import LandingPage from './page/LandingPage';
 import Bookmarked from './page/Bookmarked';
 import NavBar from './components/NavBar';
+import './App.css'
 function App() {
   return (
     <>

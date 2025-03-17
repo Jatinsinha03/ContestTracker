@@ -341,11 +341,12 @@
 .nav-links {
     display: flex;
     gap: 10px;
+    
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color:var(--nav-text-color);
     padding: 8px 15px;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -372,4 +373,58 @@
 .logout-button:hover {
     color: #bd2130; /* Darker shade on hover */
     text-decoration: underline; /* Optional: underline on hover for emphasis */
+}
+
+/* Default light theme */
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --link-color: #0066cc;
+    --header-color: #f4f4f4;
+    --nav-background: #fff; /* Example for light theme */
+    --nav-text-color: #000;
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] {
+    --background-color: #333;
+    --text-color: #ccc;
+    --link-color: #5599ff;
+    --header-color: #222;
+    --nav-background: #333; /* Example for dark theme */
+    --nav-text-color: #fff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.navbar, .filter-bar {
+    background-color: var(--nav-background);
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.filter-bar label {
+    color:var(--nav-text-color);
+}
+
+
+.theme-toggle {
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.theme-toggle:hover {
+    background-color: #ddd;
 }
