@@ -1,6 +1,6 @@
 # Contest Tracker
 
-Contest Tracker is a web application designed for programming contest enthusiasts. It tracks **upcoming and past contests** from major platforms like Codeforces, LeetCode  CodeChef. It allows users to **filter contests by platforms**, **bookmark their favorite contests**, **and access video solutions directly linked from YouTube Playlist given**.
+Contest Tracker is a web application designed for programming contest enthusiasts. It tracks **upcoming and past contests** from major platforms like Codeforces, LeetCode and CodeChef. It allows users to **filter contests by platforms**, **bookmark their favorite contests**, **and access video solutions directly linked from YouTube Playlist given**.
 
 ### Demo Youtube Link - [Link](https://youtu.be/GQDDkBCiOHs)
 
@@ -16,7 +16,7 @@ Contest Tracker is a web application designed for programming contest enthusiast
 
 ## Functionality Overview
 
-- ✅ **Current Contests from Codeforces and LeetCode**: Tracks and displays upcoming contests from both Codeforces and LeetCode.
+- ✅ **Current Contests from Codeforces, LeetCode and CodeChef**: Tracks and displays upcoming contests from Codeforces, LeetCode and CodeChef.
 - ✅ **Past Contests Log with Updatable Video Solutions**: Maintains a log of past contests and updates it with video solutions as they become available.
 - ✅ **Automated Fetching of Video Links from YouTube**: Automatically retrieves new video links from specified YouTube playlists and updates contest entries with these links.
 - ✅ **Date and Time Display for Each Contest**: Shows the exact date and time for each contest to help users plan their participation.
