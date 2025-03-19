@@ -9,8 +9,8 @@ import 'moment-timezone';
 function Contest() {
     const [contests, setContests] = useState([]);
     const [filteredContests, setFilteredContests] = useState([]);
-    const [allPlatforms] = useState(['codeforces', 'leetcode']); // All available platforms
-    const [selectedPlatforms, setSelectedPlatforms] = useState(['codeforces', 'leetcode']); // Initially select all
+    const [allPlatforms] = useState(['codeforces', 'leetcode','codechef']); // All available platforms
+    const [selectedPlatforms, setSelectedPlatforms] = useState(['codeforces', 'leetcode','codechef']); // Initially select all
 
     
     useEffect(() => {
@@ -18,6 +18,21 @@ function Contest() {
     }, []);
 
     // Assuming these functions are part of your service or utility layer
+
+
+    const normalizeCodeChefContests = (contests) => {
+      return contests.map(contest => {
+        // Directly use the provided startTime and remaining time
+        return {
+          id: `cc-${contest.id}`, // Ensure you have a unique identifier
+          name: contest.title,
+          startTime: contest.startTime, // Assuming this is already in a human-readable format
+          timeRemaining: contest.startTime, // Directly use the provided time remaining
+          link: contest.link,
+          platform: 'codechef'
+        };
+      });
+    };
 
 const normalizeCodeforcesContests = (contests) => {
   return contests.map(contest => {
@@ -105,15 +120,16 @@ const normalizeLeetCodeContests = (contests) => {
 // Fetch and normalize data from both platforms
 const fetchContests = async () => {
   try {
-      const [codeforcesResponse, leetCodeResponse] = await Promise.all([
+      const [codeforcesResponse, leetCodeResponse, codeChefResponse] = await Promise.all([
           axios.get('http://localhost:3000/api/codeforces/contests'),
-          axios.get('http://localhost:3000/api/leetcode/contests') // Adjust the endpoint as necessary
+          axios.get('http://localhost:3000/api/leetcode/contests'),
+          axios.get('http://localhost:3000/api/codechef/contests') // This endpoint needs to be set up
       ]);
       const codeforcesContests = normalizeCodeforcesContests(codeforcesResponse.data);
       const leetCodeContests = normalizeLeetCodeContests(leetCodeResponse.data);
-      console.log(leetCodeContests)
-      const mergedContests = codeforcesContests.concat(leetCodeContests);
-      console.log(mergedContests)
+      const codeChefContests = normalizeCodeChefContests(codeChefResponse.data); // Normalize CodeChef data
+
+      const mergedContests = [...codeforcesContests, ...leetCodeContests, ...codeChefContests];
       setContests(mergedContests);
       setFilteredContests(mergedContests);
   } catch (error) {
@@ -121,6 +137,7 @@ const fetchContests = async () => {
       throw error;
   }
 };
+
 
 
 const handleFilterChange = (newSelectedPlatforms) => {

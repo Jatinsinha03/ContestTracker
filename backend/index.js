@@ -1,6 +1,7 @@
 const express = require('express');
 const leetcodeRoutes = require('./routes/leetcode/leetcodeRoutes');
 const codeforcesRoutes = require('./routes/codeforces/codeforcesRoutes');
+const codechefRoutes = require('./routes/codechef/codechefRoutes')
 const app = express();
 const connectToMongo = require("./db");
 const PORT = process.env.PORT || 3000;
@@ -13,6 +14,7 @@ app.use(cors())
 // Mount routes
 app.use('/api/leetcode', leetcodeRoutes);
 app.use('/api/codeforces', codeforcesRoutes);
+app.use('/api/codechef', codechefRoutes);
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/bookmark', require('./routes/ContestBookmark'));
 
